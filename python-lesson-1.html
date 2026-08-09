@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Lesson 1: Hello, Python! | GICS Curriculum</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Girls in Computer Science Del Norte High School</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="about.html">About Us</a></li>
+								<li><a href="curriculum.html">Curriculum</a></li>
+								<li><a href="blog.html">Blogs</a></li>
+								<li><a href="event.html">Events</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+						<section>
+							<form class="search" method="get" action="#">
+								<input type="text" name="query" placeholder="Search" />
+							</form>
+						</section>
+						<section>
+							<ul class="links">
+							<p>Under Construction</p>
+							</ul>
+						</section>
+						<section>
+							<ul class="actions stacked">
+								<li><a href="#" class="button large fit">Log In</a></li>
+							</ul>
+						</section>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>Hello, Python!</h2>
+									<p>Intro to Python &middot; Lesson 1 of 4</p>
+								</div>
+								<div class="meta">
+									<span class="author"><span class="name">Goal: print your first message and store information in variables</span></span>
+								</div>
+							</header>
+
+							<section>
+								<h3>What is Python, and why start here?</h3>
+								<p>Python is a programming language used to build websites, analyze data, control robots, and much more &mdash; it's one of the most widely used languages in the world, and it reads almost like plain English. That makes it a great first language: you'll spend your time learning how to think like a programmer instead of fighting complicated syntax.</p>
+							</section>
+
+							<section>
+								<h3>Running your first program</h3>
+								<p>You don't need to install anything. Open <a href="https://replit.com/languages/python3" target="_blank" rel="noopener">replit.com/languages/python3</a>, sign in (free), and you'll get a blank Python file with a "Run" button. Type the line below into it and hit Run:</p>
+								<pre><code>print("Hello, world!")</code></pre>
+								<p>You should see <code>Hello, world!</code> appear in the console. <code>print()</code> is a <strong>function</strong> &mdash; a reusable command &mdash; that displays whatever you put inside the parentheses.</p>
+							</section>
+
+							<section>
+								<h3>Comments</h3>
+								<p>Anything after a <code>#</code> is a comment: Python ignores it completely. Comments are notes for humans, not the computer.</p>
+								<pre><code># This line does nothing when run
+print("This line does something")</code></pre>
+							</section>
+
+							<section>
+								<h3>Variables &amp; assignment</h3>
+								<p>A variable is a named box that stores a value. You create one with <code>=</code>:</p>
+								<pre><code>name = "Ada"
+age = 16
+print(name)
+print(age)</code></pre>
+								<p>Variable names should describe what they hold, can't start with a number, and can't contain spaces (use <code>_</code> instead, e.g. <code>favorite_color</code>).</p>
+							</section>
+
+							<section>
+								<h3>The four basic types</h3>
+								<p>Every value in Python has a type. The four you'll use constantly:</p>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Type</th>
+												<th>Meaning</th>
+												<th>Example</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><code>int</code></td>
+												<td>whole number</td>
+												<td><code>17</code></td>
+											</tr>
+											<tr>
+												<td><code>float</code></td>
+												<td>decimal number</td>
+												<td><code>3.14</code></td>
+											</tr>
+											<tr>
+												<td><code>str</code></td>
+												<td>text, in quotes</td>
+												<td><code>"hello"</code></td>
+											</tr>
+											<tr>
+												<td><code>bool</code></td>
+												<td>True or False</td>
+												<td><code>True</code></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<p>You can check any value's type with <code>type()</code>: <code>print(type(17))</code> prints <code>&lt;class 'int'&gt;</code>.</p>
+							</section>
+
+							<section>
+								<h3>Simple arithmetic</h3>
+								<p>Python supports the operators you'd expect: <code>+</code> <code>-</code> <code>*</code> <code>/</code>, plus <code>**</code> for exponents and <code>%</code> for remainder ("modulo").</p>
+								<pre><code>x = 10
+y = 3
+print(x + y)   # 13
+print(x - y)   # 7
+print(x * y)   # 30
+print(x / y)   # 3.3333333333333335
+print(x % y)   # 1  (remainder of 10 / 3)</code></pre>
+							</section>
+
+							<section class="box">
+								<h3><span class="icon solid fa-flask"></span> Try it yourself</h3>
+								<p>In Replit, create two variables &mdash; <code>base</code> and <code>height</code> &mdash; set to any numbers, then print the area of a triangle using the formula <code>0.5 * base * height</code>.</p>
+							</section>
+
+							<section class="box">
+								<h3><span class="icon solid fa-upload"></span> Assignment: Personal Intro</h3>
+								<p>Write a program that creates four variables &mdash; your name, your age, your favorite subject, and a fun fact about you &mdash; then uses <code>print()</code> to introduce yourself using all four, e.g.:</p>
+								<pre><code>Hi, I'm Priya! I'm 16 years old, my favorite subject is
+Computer Science, and I once built a robot out of cardboard.</code></pre>
+								<p>When you're done, copy your Replit link and submit it below.</p>
+								<footer>
+									<ul class="actions">
+										<!-- TODO: replace href="#" with the real Google Form URL for Lesson 1.
+										     Suggested form fields: Name, Grade level, Link to your Replit, Short reflection (what was tricky?) -->
+										<li><a href="#" class="button large icon solid fa-upload" target="_blank" rel="noopener">Submit Your Assignment</a></li>
+									</ul>
+								</footer>
+							</section>
+
+							<footer>
+								<ul class="actions pagination">
+									<li><span class="button large disabled previous">Previous</span></li>
+									<li><a href="python-lesson-2.html" class="button large next">Lesson 2: Talking to Your Program</a></li>
+								</ul>
+							</footer>
+						</article>
+
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+						<section id="intro">
+							<a href="curriculum.html" class="logo"><img src="images/logo.png" alt="" /></a>
+							<header>
+								<h2>Girls in Computer Science</h2>
+								<p>Del Norte High School 501c(3) </p>
+							</header>
+						</section>
+						<section id="footer">
+							<ul class="icons">
+								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+								<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+							<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+						</section>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

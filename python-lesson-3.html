@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Lesson 3: Making Decisions | GICS Curriculum</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Girls in Computer Science Del Norte High School</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="about.html">About Us</a></li>
+								<li><a href="curriculum.html">Curriculum</a></li>
+								<li><a href="blog.html">Blogs</a></li>
+								<li><a href="event.html">Events</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+						<section>
+							<form class="search" method="get" action="#">
+								<input type="text" name="query" placeholder="Search" />
+							</form>
+						</section>
+						<section>
+							<ul class="links">
+							<p>Under Construction</p>
+							</ul>
+						</section>
+						<section>
+							<ul class="actions stacked">
+								<li><a href="#" class="button large fit">Log In</a></li>
+							</ul>
+						</section>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>Making Decisions</h2>
+									<p>Intro to Python &middot; Lesson 3 of 4</p>
+								</div>
+								<div class="meta">
+									<span class="author"><span class="name">Goal: make your program choose different paths based on data</span></span>
+								</div>
+							</header>
+
+							<section>
+								<h3>Booleans and comparisons</h3>
+								<p>A <code>bool</code> is either <code>True</code> or <code>False</code>. You get one any time you compare two values:</p>
+								<pre><code>print(5 > 3)    # True
+print(5 == 3)   # False
+print(5 != 3)   # True</code></pre>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Operator</th>
+												<th>Meaning</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr><td><code>==</code></td><td>equal to</td></tr>
+											<tr><td><code>!=</code></td><td>not equal to</td></tr>
+											<tr><td><code>&gt;</code> / <code>&lt;</code></td><td>greater / less than</td></tr>
+											<tr><td><code>&gt;=</code> / <code>&lt;=</code></td><td>greater/less than or equal to</td></tr>
+										</tbody>
+									</table>
+								</div>
+								<p><strong>Common mistake:</strong> <code>=</code> assigns a value, <code>==</code> compares two values. Mixing them up is one of the most common beginner bugs.</p>
+							</section>
+
+							<section>
+								<h3>if, elif, else</h3>
+								<p>An <code>if</code> statement runs a block of code only when a condition is <code>True</code>. Notice that the indented lines are what "belongs to" the <code>if</code> &mdash; Python uses indentation (not curly braces) to group code.</p>
+								<pre><code>age = int(input("How old are you? "))
+
+if age >= 18:
+    print("You're an adult.")
+elif age >= 13:
+    print("You're a teenager.")
+else:
+    print("You're a kid.")</code></pre>
+								<p>Python checks each condition top to bottom and runs the <em>first</em> one that's <code>True</code>, then skips the rest. <code>else</code> catches everything that didn't match.</p>
+							</section>
+
+							<section>
+								<h3>Combining conditions</h3>
+								<p>Use <code>and</code>, <code>or</code>, and <code>not</code> to combine multiple checks:</p>
+								<pre><code>age = 16
+has_id = True
+
+if age >= 16 and has_id:
+    print("You can get a driver's permit.")
+
+if age < 13 or age > 19:
+    print("You're not a teenager.")</code></pre>
+								<p><code>and</code> requires both sides to be <code>True</code>; <code>or</code> only needs one.</p>
+							</section>
+
+							<section class="box">
+								<h3><span class="icon solid fa-flask"></span> Try it yourself</h3>
+								<p>Ask the user for a number with <code>input()</code>, convert it to an <code>int</code>, and print <code>"Even"</code> if it's divisible by 2 (hint: use <code>%</code> from Lesson 1) or <code>"Odd"</code> otherwise.</p>
+							</section>
+
+							<section class="box">
+								<h3><span class="icon solid fa-upload"></span> Assignment: Grade Calculator</h3>
+								<p>Write a program that asks the user for a numeric score (0&ndash;100) and prints the matching letter grade:</p>
+								<div class="table-wrapper">
+									<table>
+										<thead><tr><th>Score</th><th>Grade</th></tr></thead>
+										<tbody>
+											<tr><td>90 and above</td><td>A</td></tr>
+											<tr><td>80&ndash;89</td><td>B</td></tr>
+											<tr><td>70&ndash;79</td><td>C</td></tr>
+											<tr><td>60&ndash;69</td><td>D</td></tr>
+											<tr><td>below 60</td><td>F</td></tr>
+										</tbody>
+									</table>
+								</div>
+								<p>When you're done, copy your Replit link and submit it below.</p>
+								<footer>
+									<ul class="actions">
+										<!-- TODO: replace href="#" with the real Google Form URL for Lesson 3.
+										     Suggested form fields: Name, Grade level, Link to your Replit, Short reflection (what was tricky?) -->
+										<li><a href="#" class="button large icon solid fa-upload" target="_blank" rel="noopener">Submit Your Assignment</a></li>
+									</ul>
+								</footer>
+							</section>
+
+							<footer>
+								<ul class="actions pagination">
+									<li><a href="python-lesson-2.html" class="button large previous">Lesson 2: Talking to Your Program</a></li>
+									<li><a href="python-lesson-4.html" class="button large next">Lesson 4: Loops &amp; Functions</a></li>
+								</ul>
+							</footer>
+						</article>
+
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+						<section id="intro">
+							<a href="curriculum.html" class="logo"><img src="images/logo.png" alt="" /></a>
+							<header>
+								<h2>Girls in Computer Science</h2>
+								<p>Del Norte High School 501c(3) </p>
+							</header>
+						</section>
+						<section id="footer">
+							<ul class="icons">
+								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+								<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+							<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+						</section>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

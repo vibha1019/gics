@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Lesson 2: Talking to Your Program | GICS Curriculum</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Girls in Computer Science Del Norte High School</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="about.html">About Us</a></li>
+								<li><a href="curriculum.html">Curriculum</a></li>
+								<li><a href="blog.html">Blogs</a></li>
+								<li><a href="event.html">Events</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+						<section>
+							<form class="search" method="get" action="#">
+								<input type="text" name="query" placeholder="Search" />
+							</form>
+						</section>
+						<section>
+							<ul class="links">
+							<p>Under Construction</p>
+							</ul>
+						</section>
+						<section>
+							<ul class="actions stacked">
+								<li><a href="#" class="button large fit">Log In</a></li>
+							</ul>
+						</section>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>Talking to Your Program</h2>
+									<p>Intro to Python &middot; Lesson 2 of 4</p>
+								</div>
+								<div class="meta">
+									<span class="author"><span class="name">Goal: get input from the user and work with text</span></span>
+								</div>
+							</header>
+
+							<section>
+								<h3>Getting input from the user</h3>
+								<p>So far your programs only ever print what you already typed in. <code>input()</code> pauses the program and waits for the user to type something, then hands that text back to you:</p>
+								<pre><code>name = input("What's your name? ")
+print("Nice to meet you, " + name + "!")</code></pre>
+								<p><strong>Important:</strong> <code>input()</code> always returns a <code>str</code>, even if the user types a number.</p>
+							</section>
+
+							<section>
+								<h3>Type casting</h3>
+								<p>If you need that input as a number, convert it with <code>int()</code> or <code>float()</code>:</p>
+								<pre><code>age = input("How old are you? ")   # age is a string, e.g. "16"
+age = int(age)                     # now age is the number 16
+print(age + 1)                     # 17</code></pre>
+								<p>Without the conversion, <code>age + 1</code> would crash &mdash; you can't add a number to a string.</p>
+							</section>
+
+							<section>
+								<h3>Combining text: concatenation vs. f-strings</h3>
+								<p>You've already seen <code>+</code> used to glue strings together (concatenation). It works, but gets messy once numbers are involved &mdash; you have to convert everything to a string first. <strong>f-strings</strong> are cleaner: put an <code>f</code> before the quotes and drop variables directly into <code>{ }</code>.</p>
+								<pre><code>name = "Maya"
+age = 16
+
+# Concatenation
+print("Hi " + name + ", you are " + str(age) + " years old.")
+
+# f-string (preferred)
+print(f"Hi {name}, you are {age} years old.")</code></pre>
+							</section>
+
+							<section>
+								<h3>Useful string tools</h3>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Code</th>
+												<th>What it does</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><code>len(name)</code></td>
+												<td>number of characters in <code>name</code></td>
+											</tr>
+											<tr>
+												<td><code>name.upper()</code></td>
+												<td>ALL CAPS version</td>
+											</tr>
+											<tr>
+												<td><code>name.lower()</code></td>
+												<td>all lowercase version</td>
+											</tr>
+											<tr>
+												<td><code>name.title()</code></td>
+												<td>Title Case Version</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<pre><code>name = "maya"
+print(len(name))     # 4
+print(name.upper())  # MAYA
+print(name.title())  # Maya</code></pre>
+							</section>
+
+							<section class="box">
+								<h3><span class="icon solid fa-flask"></span> Try it yourself</h3>
+								<p>Ask the user for their favorite food with <code>input()</code>, then print an f-string that shouts it back in all caps, e.g. <code>Your favorite food is PIZZA!</code></p>
+							</section>
+
+							<section class="box">
+								<h3><span class="icon solid fa-upload"></span> Assignment: Mad-Libs Generator</h3>
+								<p>Write a program that asks the user for three words &mdash; an adjective, a noun, and a verb ending in "-ing" &mdash; using three separate <code>input()</code> calls. Then use an f-string to drop them into a silly sentence, for example:</p>
+								<pre><code>What's an adjective? sparkly
+What's a noun? dinosaur
+What's a verb ending in -ing? dancing
+
+The sparkly dinosaur went dancing through the school cafeteria.</code></pre>
+								<p>When you're done, copy your Replit link and submit it below.</p>
+								<footer>
+									<ul class="actions">
+										<!-- TODO: replace href="#" with the real Google Form URL for Lesson 2.
+										     Suggested form fields: Name, Grade level, Link to your Replit, Short reflection (what was tricky?) -->
+										<li><a href="#" class="button large icon solid fa-upload" target="_blank" rel="noopener">Submit Your Assignment</a></li>
+									</ul>
+								</footer>
+							</section>
+
+							<footer>
+								<ul class="actions pagination">
+									<li><a href="python-lesson-1.html" class="button large previous">Lesson 1: Hello, Python!</a></li>
+									<li><a href="python-lesson-3.html" class="button large next">Lesson 3: Making Decisions</a></li>
+								</ul>
+							</footer>
+						</article>
+
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+						<section id="intro">
+							<a href="curriculum.html" class="logo"><img src="images/logo.png" alt="" /></a>
+							<header>
+								<h2>Girls in Computer Science</h2>
+								<p>Del Norte High School 501c(3) </p>
+							</header>
+						</section>
+						<section id="footer">
+							<ul class="icons">
+								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+								<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+							<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+						</section>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

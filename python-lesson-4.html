@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Lesson 4: Loops &amp; Functions | GICS Curriculum</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Girls in Computer Science Del Norte High School</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="about.html">About Us</a></li>
+								<li><a href="curriculum.html">Curriculum</a></li>
+								<li><a href="blog.html">Blogs</a></li>
+								<li><a href="event.html">Events</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+						<section>
+							<form class="search" method="get" action="#">
+								<input type="text" name="query" placeholder="Search" />
+							</form>
+						</section>
+						<section>
+							<ul class="links">
+							<p>Under Construction</p>
+							</ul>
+						</section>
+						<section>
+							<ul class="actions stacked">
+								<li><a href="#" class="button large fit">Log In</a></li>
+							</ul>
+						</section>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>Loops &amp; Functions</h2>
+									<p>Intro to Python &middot; Lesson 4 of 4 (Capstone)</p>
+								</div>
+								<div class="meta">
+									<span class="author"><span class="name">Goal: repeat work with loops and package it into reusable functions</span></span>
+								</div>
+							</header>
+
+							<section>
+								<h3>for loops</h3>
+								<p>A <code>for</code> loop repeats a block of code once per item in a sequence. <code>range(n)</code> generates the numbers <code>0</code> through <code>n - 1</code>:</p>
+								<pre><code>for i in range(5):
+    print(i)
+# prints 0, 1, 2, 3, 4</code></pre>
+							</section>
+
+							<section>
+								<h3>while loops</h3>
+								<p>A <code>while</code> loop repeats as long as a condition stays <code>True</code>. You control when it stops &mdash; make sure something inside the loop eventually makes the condition <code>False</code>, or it'll run forever.</p>
+								<pre><code>count = 0
+while count < 3:
+    print("Still going:", count)
+    count = count + 1
+print("Done!")</code></pre>
+							</section>
+
+							<section>
+								<h3>Functions</h3>
+								<p>A function is a named, reusable block of code, defined with <code>def</code>. Functions can take <strong>parameters</strong> (inputs) and <code>return</code> a value (output):</p>
+								<pre><code>def square(number):
+    return number * number
+
+print(square(4))  # 16
+print(square(7))  # 49</code></pre>
+								<p>Without functions, you'd have to copy-paste the same logic every time you need it. With them, you write it once and call it as many times as you like.</p>
+							</section>
+
+							<section>
+								<h3>Putting it together: random numbers</h3>
+								<p>Python's <code>random</code> module can pick a random number for you. Add this line at the very top of your file:</p>
+								<pre><code>import random
+
+secret = random.randint(1, 100)  # a random number from 1 to 100</code></pre>
+							</section>
+
+							<section class="box">
+								<h3><span class="icon solid fa-flask"></span> Try it yourself</h3>
+								<p>Write a function called <code>is_even(number)</code> that <code>return</code>s <code>True</code> if the number is even and <code>False</code> otherwise (reuse the <code>%</code> trick from Lesson 3). Then use a <code>for</code> loop to call it on every number from 1 to 10 and print the result.</p>
+							</section>
+
+							<section class="box">
+								<h3><span class="icon solid fa-upload"></span> Capstone Assignment: Number Guessing Game</h3>
+								<p>Combine everything from all four lessons into one program:</p>
+								<ol>
+									<li>Use <code>random.randint(1, 100)</code> to pick a secret number.</li>
+									<li>Use a <code>while</code> loop that keeps asking the player to guess with <code>input()</code> until they get it right.</li>
+									<li>After each guess, use <code>if</code>/<code>elif</code>/<code>else</code> to tell them "Too high!", "Too low!", or "You got it!".</li>
+									<li>Keep count of how many guesses it took, using a variable you increase inside the loop.</li>
+									<li>Wrap the whole game in a function called <code>play_game()</code> and call it at the bottom of your file.</li>
+								</ol>
+								<pre><code>Guess a number between 1 and 100: 50
+Too high!
+Guess a number between 1 and 100: 25
+Too low!
+Guess a number between 1 and 100: 37
+You got it in 3 guesses!</code></pre>
+								<p>When you're done, copy your Replit link and submit it below &mdash; and congratulations on finishing your first course!</p>
+								<footer>
+									<ul class="actions">
+										<!-- TODO: replace href="#" with the real Google Form URL for Lesson 4.
+										     Suggested form fields: Name, Grade level, Link to your Replit, Short reflection (what was tricky?) -->
+										<li><a href="#" class="button large icon solid fa-upload" target="_blank" rel="noopener">Submit Your Assignment</a></li>
+									</ul>
+								</footer>
+							</section>
+
+							<footer>
+								<ul class="actions pagination">
+									<li><a href="python-lesson-3.html" class="button large previous">Lesson 3: Making Decisions</a></li>
+									<li><a href="curriculum.html" class="button large next">Back to Curriculum</a></li>
+								</ul>
+							</footer>
+						</article>
+
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+						<section id="intro">
+							<a href="curriculum.html" class="logo"><img src="images/logo.png" alt="" /></a>
+							<header>
+								<h2>Girls in Computer Science</h2>
+								<p>Del Norte High School 501c(3) </p>
+							</header>
+						</section>
+						<section id="footer">
+							<ul class="icons">
+								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+								<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+							<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+						</section>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

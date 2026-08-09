@@ -1,19 +1,20 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<script>(function(){try{if(localStorage.getItem('gics-theme')!=='light'){document.documentElement.classList.add('dark-mode');}}catch(e){document.documentElement.classList.add('dark-mode');}})();</script>
 		<title>Lesson 4: Loops &amp; Functions | GICS Curriculum</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/dark-mode.css" />
 	
 		<!-- Google Analytics -->
-		<!-- TODO: replace G-XXXXXXXXXX with the real GA4 Measurement ID once you create a free property at analytics.google.com -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-5QDFNY28S8"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
-			gtag('config', 'G-XXXXXXXXXX', { content_group: 'Curriculum' });
+			gtag('config', 'G-5QDFNY28S8', { content_group: 'Curriculum' });
 		</script>
 	</head>
 	<body class="single is-preload">
@@ -23,14 +24,14 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html">Girls in Computer Science Del Norte High School</a></h1>
+						<h1><a href="../index.html">Girls in Computer Science Del Norte High School</a></h1>
 						<nav class="links">
 							<ul>
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="curriculum.html">Curriculum</a></li>
-								<li><a href="blog.html">Blogs</a></li>
-								<li><a href="event.html">Events</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="../about.html">About Us</a></li>
+								<li><a href="index.html">Curriculum</a></li>
+								<li><a href="../blog/index.html">Blogs</a></li>
+								<li><a href="../event.html">Events</a></li>
+								<li><a href="../contact.html">Contact</a></li>
 							</ul>
 						</nav>
 						<nav class="main">
@@ -41,7 +42,10 @@
 										<input type="text" name="query" placeholder="Search" />
 									</form>
 								</li>
-								<li class="menu">
+													<li class="theme-toggle">
+						<a href="#" id="theme-toggle-btn" class="fa-moon" title="Toggle dark mode"></a>
+					</li>
+					<li class="menu">
 									<a class="fa-bars" href="#menu">Menu</a>
 								</li>
 							</ul>
@@ -150,7 +154,7 @@ You got it in 3 guesses!</code></pre>
 							<footer>
 								<ul class="actions pagination">
 									<li><a href="python-lesson-3.html" class="button large previous">Lesson 3: Making Decisions</a></li>
-									<li><a href="curriculum.html" class="button large next">Back to Curriculum</a></li>
+									<li><a href="index.html" class="button large next">Back to Curriculum</a></li>
 								</ul>
 							</footer>
 						</article>
@@ -160,7 +164,7 @@ You got it in 3 guesses!</code></pre>
 				<!-- Sidebar -->
 					<section id="sidebar">
 						<section id="intro">
-							<a href="curriculum.html" class="logo"><img src="images/logo.png" alt="" /></a>
+							<a href="index.html" class="logo"><img src="../images/logo.png" alt="" /></a>
 							<header>
 								<h2>Girls in Computer Science</h2>
 								<p>Del Norte High School 501c(3) </p>
@@ -181,11 +185,12 @@ You got it in 3 guesses!</code></pre>
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/theme-toggle.js"></script>
 
 	</body>
 </html>

@@ -5,6 +5,16 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+	
+		<!-- Google Analytics -->
+		<!-- TODO: replace G-XXXXXXXXXX with the real GA4 Measurement ID once you create a free property at analytics.google.com -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-XXXXXXXXXX', { content_group: 'Curriculum' });
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -183,6 +193,24 @@
 								<footer>
 									<ul class="actions">
 										<li><a href="digital-literacy-1.html" class="button large">Start Module 1</a></li>
+									</ul>
+								</footer>
+							</article>
+
+						<!-- Feedback -->
+							<article class="post box">
+								<header>
+									<div class="title">
+										<h2><span class="icon solid fa-comment"></span> Have Feedback?</h2>
+										<p>Tell us what worked, what didn't, or what course you'd like to see next</p>
+									</div>
+								</header>
+								<p>Whether you finished a whole course or just poked around, we want to hear about it &mdash; it's the only way this stays good after the people who built it graduate.</p>
+								<footer>
+									<ul class="actions">
+										<!-- TODO: replace href="#" with the real Google Form URL for curriculum feedback.
+										     Suggested form fields: Name (optional), Which course, What worked, What could be better, Course ideas -->
+										<li><a href="#" class="button large icon solid fa-upload" target="_blank" rel="noopener">Give Feedback</a></li>
 									</ul>
 								</footer>
 							</article>

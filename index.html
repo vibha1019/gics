@@ -10,6 +10,50 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.highlight-banner {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				gap: 1em;
+				border: solid 1px rgba(160, 160, 160, 0.3);
+				border-top: 4px solid #2ebaae;
+				padding: 1.5em;
+				margin: 0 0 2em 0;
+			}
+			.highlight-banner .eyebrow {
+				display: inline-block;
+				background: #2ebaae;
+				color: #fff;
+				font-family: "Raleway", Helvetica, sans-serif;
+				font-weight: 800;
+				font-size: 0.7em;
+				letter-spacing: 0.15em;
+				text-transform: uppercase;
+				padding: 0.35em 0.9em;
+				margin-bottom: 0.75em;
+			}
+			.highlight-banner h3 {
+				margin: 0 0 0.25em 0;
+			}
+			.highlight-banner p {
+				margin: 0;
+			}
+			.highlight-banner .actions {
+				margin: 0;
+			}
+		</style>
+
+		<!-- Google Analytics -->
+		<!-- TODO: replace G-XXXXXXXXXX with the real GA4 Measurement ID once you create a free property at analytics.google.com -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-XXXXXXXXXX', { content_group: 'Main Site' });
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -95,6 +139,18 @@
 
 				<!-- Main -->
 					<div id="main">
+
+						<!-- Curriculum highlight -->
+							<div class="highlight-banner">
+								<div>
+									<span class="eyebrow">New</span>
+									<h3>GICS Curriculum just dropped &mdash; go check it out!</h3>
+									<p>Free, self-paced Intro to Python and Intro to Digital Literacy courses. No experience needed.</p>
+								</div>
+								<ul class="actions">
+									<li><a href="curriculum.html" class="button large">Explore the Curriculum</a></li>
+								</ul>
+							</div>
 
 						<!-- Post -->
 							<article class="post">
